@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Image Scroll - Polymer component</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!--<link rel="shortcut icon" href="/favicon.ico">   -->
+        <script src="../platform/platform.js"></script>
+          
+        <link rel="import" href="img-scroll.html">
+        
+        <style>
+          html,body {
+            height: 100%;
+            margin: 0;
+            background-color: #E5E5E5;
+           
+          }
+        </style>
+    </head>
+    <body unresolved touch-action="auto">
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <image-scroll images="" element_background="white"></image-scoll>    
+        
+        <script type="text/javascript">
+        var imgs = ['\'http://ppcdn.500px.org/78575119/a13f243d4123fd148d1b5ea9a43455639bdec32c/3.jpg?v=0\'','\'http://ppcdn.500px.org/78515135/c1490a4ed3592ea5b2e80c4affd2b73bf88063f9/3.jpg?v=0\'','\'http://ppcdn.500px.org/78548799/044fac64fcff3e374ca12c4392f18e36bba92588/3.jpg?v=0\'','\'http://ppcdn.500px.org/78536477/87b1dec656a42410bdd2bdcea30b1709bbc4f719/3.jpg?v=0\'','\'http://ppcdn.500px.org/78523645/2e5c549152f075c3015251b5499ccb8d84006e8f/3.jpg?v=0\'','\'http://ppcdn.500px.org/78583029/ba1e70e9af1ca280b3b8c0f44c2c7cbdb3464bf4/3.jpg?v=0\'','\'http://ppcdn.500px.org/78568221/6eed6c11297852ee309b4a68a248dad69133483c/3.jpg?v=0\'','\'http://ppcdn.500px.org/78743141/64412911ef2718b91383bf25abec153bd1bec793/3.jpg?v=0\'','\'http://ppcdn.500px.org/78727469/f77cbdec2adc46e9ca5db084882b6293f7a3a4d0/3.jpg?v=0\'','\'http://ppcdn.500px.org/78736845/65c3d2763c7fcd71d568f3c8e563fc9dfcb1ae06/3.jpg?v=0\'','\'http://ppcdn.500px.org/78542089/b4055fcccf163c7221293c12727f02bb29c4254c/3.jpg?v=0\'','\'http://ppcdn.500px.org/78494883/5d823e3c1a214dcf6dad385ee237e47cc0dc8ae2/3.jpg?v=0\''];
+        
+            document.querySelector('image-scroll').attributes.images.value = "["+ imgs + "]";
+
+        </script>
+       
+</body>
+</html>

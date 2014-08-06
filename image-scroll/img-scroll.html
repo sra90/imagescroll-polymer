@@ -1,0 +1,84 @@
+<!-- 
+  Polymer component to produce a scrolling effect similar to cover flow scroll. Eg: in iTunes 
+
+  Works properly in Chrome 
+-->
+
+<link rel="import" href="../polymer/polymer.html">
+
+<polymer-element name="image-scroll" attributes="images element_background">
+  <template>
+    <style>
+      :host {
+        display: block;
+        width: 100%;
+      }
+      .image-tumbs-holder{
+        overflow-x: auto;
+        overflow-y: hidden;
+        position: relative;
+        width: 1040px;
+        padding-top: 15px;
+      }
+      .image-tumbs-holder, .hide-bar{
+        background-color: {{element_background}}
+      }
+      ul.image-tumbs{
+        display: inline-flex;
+        float: left;
+        list-style: none;
+        padding-left: 15px;
+      }
+      li{
+        margin-bottom: 5px;
+        margin-right: 10px;
+      }
+      li img{
+        max-width: 250px;
+        max-height: 250px;
+        border-radius: 5px;
+        cursor: pointer;
+        position: relative;
+      }    
+      .dummy-img{
+        width: 260px;
+      }
+      .hide-bar{
+        width: 1040px;
+        height: 12px;
+        position: relative;
+        bottom: 15px;
+      }
+    </style>
+
+    <div layout vertical center>
+      <div class="image-tumbs-holder text-center">
+        <ul class="image-tumbs clearfix list-unstyled list-inline">
+          <template repeat="{{image in images}}">
+            <li class="pull-left">
+              <img src="{{image}}" alt="">
+            </li>
+          </template>
+          <!-- Dummy required to ensure last img display -->
+          <li class="dummy-img"></li>
+        </ul>
+      </div>  
+      <div class="hide-bar"></div>
+    </div>
+  </template>
+
+  <script>
+  Polymer('image-scroll',{
+    
+    created: function() {
+        // create a default settings object for this instance
+        this.images = [];
+        this.element_background = 'white';
+        this.wid = 220;
+    }
+
+  });
+  </script>
+  <script type="text/javascript" src="img-scroll.js"></script>
+</polymer-element>
+  
